@@ -4,9 +4,9 @@
 		//Remove AMD ceremony for use without require.js or almond.js
 		contents = contents.replace(defineRegExp, '')
 		//Remove the trailing }) for the define call and any semicolon
-		.replace(/\}\)(;)?\s*$/, '');
+		.replace(/\}\)(;)?\s*$/, '')
 		//remove last return statment
-		output = contents.replace(/return.*[^return]$/,'');
-		return output;
+		.replace(/return.*[^return]*$/,'');
+		return contents;
 	}
 })
